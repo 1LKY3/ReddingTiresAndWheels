@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDING Tire & Wheels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo2.png" alt="REDDING Tire & Wheels Logo" class="logo" id="main-logo" tabindex="0" style="cursor:pointer;">
+            <h1>REDDING Tire & Wheels</h1>
+            <p class="tagline">Your Source for Quality Tires, Wheels, and Service</p>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Get Rolling with Confidence</h2>
+            <p>Expert service for Brakes, Shocks, Used Tires, and more!</p>
+            <a href="tel:+15302293705" class="btn">Call Us: 530-229-3705</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Tires & Wheels</li>
+                <li>Brakes</li>
+                <li>Shocks</li>
+                <li>Used Tires</li>
+                <li>Installation & Balancing</li>
+                <li>Alignments</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Visit us today at:</p>
+            <address>
+                2010 Railroad Ave<br>
+                Redding, CA 96001
+            </address>
+            <div class="phone-number">
+                Phone: <a href="tel:+15302293705">530-229-3705</a>
+            </div>
+            <!-- Hours could be added here if known -->
+            <div class="map-embed">
+                <!-- Placeholder for Google Map Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.7300000000003!2d-122.3935046!3d40.580000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54d2ed91e8c576e3%3A0x37035477fa9f6f46!2sREDDING%20TIRES%20AND%20WHEELS!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="get-directions-button">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=2010+Railroad+Ave,+Redding,+CA+96001" target="_blank" class="btn">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 REDDING Tire & Wheels. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+    // Logo rotation logic - automatic every 30 seconds
+    const logoFiles = ["logo2.png", "logo3.png", "logo1.png"];
+    let logoIndex = 0;
+    const logoImg = document.getElementById("main-logo");
+
+    function rotateLogo() {
+        logoIndex = (logoIndex + 1) % logoFiles.length;
+        logoImg.src = logoFiles[logoIndex];
+    }
+
+    // Start automatic rotation every 2.5 seconds (2500 ms)
+    setInterval(rotateLogo, 2500);
+
+    // Optional: Keep manual click and keyboard rotation
+    logoImg.addEventListener("click", rotateLogo);
+    logoImg.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            rotateLogo();
+        }
+    });
+</script>
+</body>
+</html>
